@@ -13,6 +13,10 @@ import javalatihanform.ModelProgram.ModelProgram;
  */
 public class NameLogic {
     public String returnName(ModelProgram modelProgram){
-        return "Your name couldn't be empty!" + modelProgram.getName();    
+    if (modelProgram.getName().equals("")){
+        return "Your name couldn't be empty! ";
+    } else {
+        return "Hello, you must be " + modelProgram.getName();
+    }
     }
 }
